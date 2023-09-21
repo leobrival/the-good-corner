@@ -4,8 +4,8 @@ Content-Type: application/json
 {
   "title": "Macbook air M2",
   "description": "description of the computer.",
-  "owner": "Pierre",
+  "author": "Pierre",
   "price": 1500,
-  "picture": "https://www.automobile-magazine.fr/asset/cms/34973/config/28294/apres-plusieurs-prototypes-la-bollore-bluecar-a-fini-par-devoiler-sa-version-definitive.jpg",
-  "location": "Lyon"
+  "imageUrl": "https://www.automobile-magazine.fr/asset/cms/34973/config/28294/apres-plusieurs-prototypes-la-bollore-bluecar-a-fini-par-devoiler-sa-version-definitive.jpg",
+  "city": "Lyon"
 }
