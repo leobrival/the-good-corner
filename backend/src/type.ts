@@ -2,9 +2,9 @@ export type Ad = {
   id: number;
   title: string;
   description?: string;
-  owner: string;
+  author: string;
   price: number;
-  picture: string;
+  imageUrl: string;
   location: string;
   createdAt: string | Date;
 };
