@@ -5,8 +5,9 @@ type AdCardProps = {
   imgUrl: string;
   title: string;
   price: number;
+  onAddPrice: (price: number) => void;
 };
-export default function AdCard({link, imgUrl, title, price}: AdCardProps) {
+export default function AdCard({link, imgUrl, title, price, onAddPrice}: AdCardProps) {
   return (
     <div className="ad-card-container">
       <Link className="ad-card-link" href={link}>
@@ -16,6 +17,9 @@ export default function AdCard({link, imgUrl, title, price}: AdCardProps) {
           <div className="ad-card-price">{price} €</div>
         </div>
       </Link>
+      <button className="button" onClick={() => onAddPrice(price)}>
+        Add price to total
+      </button>
     </div>
   )
 }

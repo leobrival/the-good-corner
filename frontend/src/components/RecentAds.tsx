@@ -1,4 +1,5 @@
 import React from 'react'
+import { useEffect, useState } from "react";
 import AdCard from "./AdCard";
 
 export default function RecentAds() {
@@ -41,12 +42,21 @@ export default function RecentAds() {
     },
   ];
 
+  const [total, setTotal] = useState(0);
+
+  const handleAddPrice = (price: number) => setTotal((oldTotal) => oldTotal + price);
+
+  useEffect(() => {
+    console.log("First render")
+  }, []);
+
   return (
     <>
-      <h2>Annonces récentes</h2>
+      <h2>Total : {total}</h2>
+      <button className='button' onClick={() => setTotal(0)}>Reset</button>
       <section className="recent-ads">
         {ads.map((ad) => (
-          <AdCard {...ad} key={ad.title} />
+          <AdCard {...ad} onAddPrice={handleAddPrice} key={ad.title} />
         ))}
       </section>
     </>
